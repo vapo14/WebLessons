@@ -4,3 +4,5 @@ Este repo contiene ejemplos basicos sobre la funcionalidad de tecnologías front
 Cada lección contiene un objetivo en específico y no estan necesariamente organizadas por dificultad. 
 - Lee bien los comentarios
 - No te saltees una parte si no quedó bien comprendida. 
+- Modifica, quiebra, experimenta
+- Todo esta en Google
