@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <h2>Simple form</h2>
+
+      <!-- El form tiene un atributo que se llama onsubmit, al cual
+        le podemos asignar una funcion de javascript para que se ejecute
+        cada vez que le damos submit al form. Cada atributo que comienza con 
+        la palabra 'on' es un "Event Listener". 
+
+        Un event listener siempre esta 'escuchando' cada vez que suceda un evento.
+        Un evento es una accion dentro de tu pagina. Puede ser un click, scroll, 
+        resize, etc. Si el event listener se llama 'onclick', quiere decir
+        que la funcion se va a ejecutar cada vez que haya un click.
+
+        En este caso nuestro event listener va a escuchar para cada vez
+        que haya un submit del form, osea cada vez que le demos click al
+        boton. Y la funcion que le asignamos se llama 'send'. Esta funcion
+        esta declarada en 'form.js'
+-->
+
+      <form onsubmit="send(event)">
+        <!-- 
+            Input de tipo texto. 
+            El atributo 'placeholder' nos permite poner un texto
+            predeterminado para decirle al usuario que es lo que va 
+            en este input. Son las letras que aparecen en gris y de fondo.
+         -->
+        <input type="text" placeholder="Subject" class="form-input" />
+        <!-- 
+            Un textarea.
+            Usamos un textarea en lugar de un input porque el textarea
+            tiene mas espacio para texto y es reajustable, es decir
+            puedes cambiar su tamano a como tu quieras. Si fuera una
+            contrasena o correo (osea algo mas chico) si se usaria un
+            input.
+          -->
+
+        <textarea placeholder="Message" class="form-input"></textarea>
+
+        <!-- 
+            Boton de submit.
+            Recordemos la definicion de la palabra 'submit':
+                to give (a document, proposal, piece of writing, etc.) to someone 
+                so that it can be considered or approved
+
+            'Submit a form' entonces se refiere a enviar un formato.
+            El boton tiene el atributo type='submit' porque esto le dice
+            al form que este boton en particular es el que se encarga de enviarla.
+            Si no le especificamos a un boton dentro de un form que es el 'submit'
+            entonces no la podremos enviar.
+         -->
+        <button type="submit" class="form-button">Send</button>
+      </form>
+      <div class="form-content">
+        <h2>Form content:</h2>
+        <!-- 
+            Parrafo vacio con id de 'content'.
+
+            Este elemento esta vacio inicialmente porque no tenemos
+            los datos del form aun. Es por medio de javascript en la 
+            funcion send() donde nosotros buscamos a este elemento usando
+            document.getElementById(). 
+
+            Una vez que lo tenemos, podemos asignarle un innerText.
+
+         -->
+        <p id="content">
+          <!-- El innerText de javascript va aqui -->
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/form.js"></script>
+</html>

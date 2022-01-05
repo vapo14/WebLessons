@@ -1,0 +1,90 @@
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 15px;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* contenedor principal con ancho del 100% de la pagina
+y texto alineado al centro */
+.mainContainer {
+  width: 100%;
+  text-align: center;
+}
+
+/* el form dentro del contenedor principal tiene un display flex
+con orientacion vertical (columna) para que los input se organicen
+hacia abajo.
+
+tiene ancho y alto de fit-content para que se ajuste al contenido del
+form. */
+.mainContainer > form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* el simbolo '>' significa "dentro de". en este caso, estamos seleccionando
+el textarea dentro del form dentro del .mainContainer */
+
+.mainContainer > form > textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ajustamos un poco el borde de los inputs y su tamano
+para que se vaean mejor
+*/
+.form-input {
+  margin: 15px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px;
+}
+
+/*
+    El boton es un rectangulo azul con tamano fijo.
+
+    la propiedad margin tiene la sintaxis:
+    margin: TOP RIGHT BOTTOM LEFT
+
+    que es lo mismo que decir
+    margin-top: 10px
+    margin-right: auto
+    margin-bottom: 10px
+    margin-left: auto
+*/
+.form-button {
+  border-radius: 10px;
+  background-color: rgb(1, 121, 233);
+  color: white;
+  border: none;
+  width: fit-content;
+  margin: 10px auto 10px auto;
+  height: 40px;
+  width: 80px;
+}
+
+/*
+    cuando pones el mouse sobre el boton se hace
+    un color mas obscuro
+*/
+.form-button:hover {
+  background-color: rgb(0, 96, 185);
+}
+
+/*
+    separamos el form content un poco del form para 
+    darle espacio blanco con un margen de 150px.
+*/
+
+.form-content {
+  margin-top: 150px;
+}
